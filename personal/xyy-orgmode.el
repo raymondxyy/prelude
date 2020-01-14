@@ -5,7 +5,7 @@
 (setq org-directory "/home/xyy/pCloudDrive/xyy/0-Org")
 (setq org-default-notes-file (concat org-directory "/WorkingMemory.org"))
 (setq org-capture-templates
-      `(("t" "Todo [Inbox]" entry (file ,(concat org-directory "/_Inbox_.org"))
+      `(("t" "Todo [Inbox]" entry (file ,(concat org-directory "/WorkingMemory.org"))
          "* TODO %?\n  %i\n  %a")
         ("j" "Journal" entry (file+datetree ,(concat org-directory "/Journal.org"))
          "* %?\nEntered on %U\n  %i\n  %a")
