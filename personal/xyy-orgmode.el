@@ -2,13 +2,11 @@
 (require 'use-package)
 
 ;; Configure orgmode
-(setq org-directory "/home/xyy/pCloudDrive/xyy/0-Org")
+(setq org-directory "/home/xyy/pCloudDrive/xyy/0-Org/desktop")
 (setq org-default-notes-file (concat org-directory "/WorkingMemory.org"))
 (setq org-capture-templates
       `(("t" "Todo [Inbox]" entry (file ,(concat org-directory "/WorkingMemory.org"))
          "* TODO %?\n  %i\n  %a")
-        ("j" "Journal" entry (file+datetree ,(concat org-directory "/Journal.org"))
-         "* %?\nEntered on %U\n  %i\n  %a")
         ("n" "Note" entry (file ,(concat org-directory "/WorkingMemory.org"))
          "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)))
 (setq org-archive-location (concat org-directory "/Archives.org::"))
