@@ -2,7 +2,7 @@
 (require 'use-package)
 
 ;; Configure orgmode
-(setq org-directory "/home/xyy/pCloudDrive/xyy/0-Org/desktop")
+(setq org-directory "/home/xyy/pCloudDrive/xyy/0-Org/Desktop")
 (setq org-default-notes-file (concat org-directory "/WorkingMemory.org"))
 (setq org-capture-templates
       `(("t" "Todo [Inbox]" entry (file ,(concat org-directory "/WorkingMemory.org"))
