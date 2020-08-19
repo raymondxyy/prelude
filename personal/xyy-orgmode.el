@@ -1,5 +1,7 @@
 (require 'org)
 (require 'use-package)
+(require 'org-roam-protocol)
+(require 'org-journal)
 
 ;; Configure orgmode
 (setq org-directory "/home/xyy/pCloudDrive/xyy/0-Org/Desktop")
@@ -16,6 +18,9 @@
 (setq org-src-fontify-natively 't)
 (setq org-src-tab-acts-natively t)
 (setq org-src-window-setup 'current-window)
+
+;; org-journal
+(setq org-journal-dir "/home/xyy/repos/know/Journal")
 
 ;; Define keywords
 (setq org-todo-keyword-faces
@@ -62,6 +67,10 @@
                             `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.33))))
                             `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.33))))
                             `(org-document-title ((t (,@headline ,@variable-tuple :height 1.33 :underline nil))))))
+
+;;; Org-roam
+(setq org-roam-directory "~/repos/know")
+(add-hook 'after-init-hook 'org-roam-mode)
 
 ;;; Resources:
 ;;; https://jamiecollinson.com/blog/my-emacs-config/#org
